@@ -38,4 +38,10 @@ body{
     background: rgba(255, 255, 255, 0.2);
     border-radius: 15px;
 }
+.result-style{
+    display: none;
+}
+.resultLyrics-style{
+    display: none;
+}
 

@@ -1,3 +1,6 @@
+const result = document.getElementById("result");
+const resultLyrics = document.getElementById("resultLyrics");
+
 // api Url
 
 const apiURL = 'https://api.lyrics.ovh';
@@ -33,7 +36,7 @@ function showData(data){
       ${data.data
         .map(song=> `<li>
                     <div>
-                        <p class="author lead"><strong>${song.artist.name}</strong> Album by <span>${song.title}</span><button class="btn btn-success"><span data-artist="${song.artist.name}" data-songtitle="${song.title}">Get Lyrics</span></button></p> 
+                        <p class="author lead"><strong style="font-weight: 700;">${song.artist.name}</strong> Album by <span style="font-weight: 400;">${song.title}</span><button class="btn btn-success ml-2"><span data-artist="${song.artist.name}" data-songtitle="${song.title}">Get Lyrics</span></button></p> 
                     </div>
                 </li>`
         )
@@ -47,7 +50,7 @@ function showData(data){
 result.addEventListener('click', e=>{
     const clickedElement = e.target;
 
-    //checking clicked elemet is button or not
+    //checking clicked element is button or not
     if (clickedElement.tagName === 'SPAN'){
         const artist = clickedElement.getAttribute('data-artist');
         const songTitle = clickedElement.getAttribute('data-songtitle');
@@ -68,5 +71,5 @@ async function getLyrics(artist , songTitle){
     <h2 class="text-success mb-4"><strong>${artist}</strong> - ${songTitle}</h2>
     <pre class="lyric text-white">${lyrics}</pre>
     </div>`;
-}
+};
 
