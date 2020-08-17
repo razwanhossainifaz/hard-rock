@@ -46,13 +46,15 @@
             <div class="search-bar col-md-6 mx-auto">
                 <h1 class="text-center">Lyrics Search</h1>
                 <div class="search-box my-5">
-                    <input type="text" class="form-control" placeholder="Enter your artist song name">
-                    <button class="btn btn-success search-btn">Search</button>
+                    <form id="form">
+                        <input id = "search" type="text" class="form-control" placeholder="Enter your artist song name">
+                        <button id = "search-btn" class="btn btn-success search-btn">Search</button>
+                    </form>
                 </div>
             </div>
             <!-- === Simple results === -->
-            <div class="d-flex justify-content-center">
-                <div class="">
+            <div id = "result" class="d-flex justify-content-center">
+                <div>
                     <p class="author lead"><strong>Purple Noon</strong> Album by <span>Washed Out</span> <button class="btn btn-success">Get Lyrics</button></p>
                     <p class="author lead"><strong>Purple Noon</strong> Album by <span>Washed Out</span> <button class="btn btn-success">Get Lyrics</button></p>
                     <p class="author lead"><strong>Purple Noon</strong> Album by <span>Washed Out</span> <button class="btn btn-success">Get Lyrics</button></p>
@@ -61,7 +63,7 @@
                 </div>
             </div>
             <!-- Single Lyrics -->
-            <div class="single-lyrics text-center">
+            <div id = "resultLyrics" class="single-lyrics text-center">
                 <button class="btn go-back">&lsaquo;</button>
                 <h2 class="text-success mb-4">Pentatonix - Na Na Na</h2>
                 <pre class="lyric text-white">
@@ -220,7 +222,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
     <!-- Custom Script Here -->
+    <script src="script.js"></script>
 
 </body>
-
 </html>
