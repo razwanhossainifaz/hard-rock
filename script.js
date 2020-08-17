@@ -55,7 +55,7 @@ result.addEventListener('click', e=>{
         const artist = clickedElement.getAttribute('data-artist');
         const songTitle = clickedElement.getAttribute('data-songtitle');
         
-        getLyrics(artist, songTitle)
+        getLyrics(artist , songTitle)
     }
 })
 
@@ -72,4 +72,6 @@ async function getLyrics(artist , songTitle){
     <pre class="lyric text-white">${lyrics}</pre>
     </div>`;
 };
+
+
 
